@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jose_\\source\\repos\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj": {}
+    "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jose_\\source\\repos\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj": {
+    "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jose_\\source\\repos\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+        "projectUniqueName": "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
         "projectName": "EasyNutrition.API",
-        "projectPath": "C:\\Users\\jose_\\source\\repos\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+        "projectPath": "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
         "packagesPath": "C:\\Users\\jose_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jose_\\source\\repos\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
+        "outputPath": "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,6 +40,28 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
