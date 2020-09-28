@@ -35,8 +35,14 @@ E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNu
 E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\EasyNutrition.API.dll
 E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\EasyNutrition.API.pdb
 E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.csproj.CoreCompileInputs.cache
-E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.MvcApplicationPartsAssemblyInfo.cache
 E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.dll
 E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.pdb
 E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.genruntimeconfig.cache
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Annotations.dll
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.csproj.CoreCompileInputs.cache
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.MvcApplicationPartsAssemblyInfo.cs
+E:\UPC\2020-2\APLICACIONES WEB\Proyecto\Proyecto Desarrollo\EasyNutrition\EasyNutrition.API\EasyNutrition.API\obj\Debug\netcoreapp3.1\EasyNutrition.API.MvcApplicationPartsAssemblyInfo.cache

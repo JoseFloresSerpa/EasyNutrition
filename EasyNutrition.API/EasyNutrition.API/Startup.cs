@@ -6,6 +6,7 @@ using AutoMapper;
 using EasyNutrition.API.Domain.Persistence.Contexts;
 using EasyNutrition.API.Domain.Repositories;
 using EasyNutrition.API.Domain.Services;
+using EasyNutrition.API.Extensions;
 using EasyNutrition.API.Persistence.Repositories;
 using EasyNutrition.API.Services;
 using Microsoft.AspNetCore.Builder;
@@ -46,6 +47,9 @@ namespace EasyNutrition.API
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddAutoMapper(typeof(Startup));
+
+            services.AddCustomSwagger();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +70,7 @@ namespace EasyNutrition.API
             {
                 endpoints.MapControllers();
             });
+            app.UseCustomSwagger();
         }
     }
 }
