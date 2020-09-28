@@ -4,7 +4,6 @@ using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Domain.Services.Communication;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EasyNutrition.API.Services

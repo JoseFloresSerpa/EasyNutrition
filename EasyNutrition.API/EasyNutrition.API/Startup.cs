@@ -48,6 +48,8 @@ namespace EasyNutrition.API
 
             services.AddAutoMapper(typeof(Startup));
 
+            services.AddRouting(options => options.LowercaseUrls = true);
+
             services.AddCustomSwagger();
 
         }

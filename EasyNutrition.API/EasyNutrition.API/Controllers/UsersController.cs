@@ -4,6 +4,7 @@ using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Extensions;
 using EasyNutrition.API.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ using System.Threading.Tasks;
 
 namespace EasyNutrition.API.Controllers
 {
+    [ApiController]
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
@@ -24,7 +27,14 @@ namespace EasyNutrition.API.Controllers
             _mapper = mapper;
         }
 
+        [SwaggerOperation(
+          Summary = "List all users",
+          Description = "List of Users",
+          OperationId = "ListAllUsers",
+          Tags = new[] { "Users" })]
+        [SwaggerResponse(200, "List of Users", typeof(IEnumerable<UserResource>))]
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<UserResource>), 200)]
         public async Task<IEnumerable<UserResource>> GetAllAsync()
         {
             var users = await _userService.ListAsync();
@@ -32,7 +42,15 @@ namespace EasyNutrition.API.Controllers
             return resources;
         }
 
+
+        [SwaggerOperation(
+               Summary = "Add user",
+               Description = "Add new user",
+               OperationId = "AddUser",
+               Tags = new[] { "Users" })]
+        [SwaggerResponse(200, "Add Users", typeof(IEnumerable<UserResource>))]
         [HttpPost]
+        [ProducesResponseType(typeof(IEnumerable<UserResource>), 200)]
         public async Task<IActionResult> PostAsync([FromBody] SaveUserResource resource)
         {
             if (!ModelState.IsValid)
@@ -47,7 +65,16 @@ namespace EasyNutrition.API.Controllers
             return Ok(userResource);
         }
 
+
+
+        [SwaggerOperation(
+           Summary = "Update user",
+           Description = "Update a user",
+           OperationId = "UpdateUser",
+           Tags = new[] { "Users" })]
+        [SwaggerResponse(200, "Update Users", typeof(IEnumerable<UserResource>))]
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(IEnumerable<UserResource>), 200)]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SaveUserResource resource)
         {
             var user = _mapper.Map<SaveUserResource, User>(resource);
@@ -59,7 +86,15 @@ namespace EasyNutrition.API.Controllers
             return Ok(userResource);
         }
 
+
+        [SwaggerOperation(
+        Summary = "Delete user",
+        Description = "Delete a user",
+        OperationId = "DeleteUser",
+        Tags = new[] { "Users" })]
+        [SwaggerResponse(200, "Delete Users", typeof(IEnumerable<UserResource>))]
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(IEnumerable<UserResource>), 200)]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _userService.DeleteAsync(id);
@@ -67,7 +102,6 @@ namespace EasyNutrition.API.Controllers
                 return BadRequest(result.Message);
             var userResource = _mapper.Map<User, UserResource>(result.Resource);
             return Ok(userResource);
-
         }
     }
 }
