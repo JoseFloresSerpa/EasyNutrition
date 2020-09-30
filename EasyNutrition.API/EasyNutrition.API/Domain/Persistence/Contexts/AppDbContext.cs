@@ -42,7 +42,9 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                 (
                     new Role { Id = 1, Name = "Nutricionista" },
                     new Role { Id = 2, Name = "Cliente" },
-                    new Role { Id = 3, Name = "Administrador" }
+                    new Role { Id = 3, Name = "Administrador" },
+                    new Role { Id = 4, Name = "Administrador" }
+
 
                 );
 
