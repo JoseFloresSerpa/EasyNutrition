@@ -14,6 +14,8 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Complaint> Complaint { get; set; }
+        public DbSet<Experience> Experience { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -82,10 +84,48 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                     
                 );
 
+            //Entidad Complaint
+            builder.Entity<Complaint>().ToTable("Complaint");
+            builder.Entity<Complaint>().HasKey(p => p.Id);
+            builder.Entity<Complaint>().Property(p => p.Id)
+                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Complaint>().Property(p => p.Description)
+                .IsRequired().HasMaxLength(50);
+
+            builder.Entity<Complaint>()
+             .HasOne(pt => pt.Experience)
+             .WithMany(p => p.Complaints)
+             .HasForeignKey(pt => pt.ExperienceId);
+
+            // Agregar data a Complaint
+            builder.Entity<Complaint>().HasData
+              (
+                  new Complaint { Id = 1, Description = "Descripcion de prueba complaint",ExperienceId = 1}
+
+              );
 
 
+            //Entidad Experience
+            builder.Entity<Experience>().ToTable("Experience");
+            builder.Entity<Experience>().HasKey(p => p.Id);
+            builder.Entity<Experience>().Property(p => p.Id)
+                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Experience>().Property(p => p.Name)
+                .IsRequired().HasMaxLength(50);
+            builder.Entity<Experience>().Property(p => p.Description)
+                .IsRequired().HasMaxLength(50);
 
+            builder.Entity<Experience>()
+             .HasMany(p => p.Complaints)
+             .WithOne(p => p.Experience)
+             .HasForeignKey(p => p.ExperienceId);
 
+            // Agregar data a Experience
+            builder.Entity<Experience>().HasData
+              (
+                  new Experience { Id = 1, Name = "Nombre",Description = "Descripcion de prueba experience" }
+
+              );
 
 
             // Apply Naming Conventions Policy

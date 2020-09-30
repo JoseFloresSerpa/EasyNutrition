@@ -8,6 +8,7 @@ using EasyNutrition.API.Domain.Repositories;
 using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Extensions;
 using EasyNutrition.API.Persistence.Repositories;
+using EasyNutrition.API.Resources;
 using EasyNutrition.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,6 +44,13 @@ namespace EasyNutrition.API
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IExperienceRepository, ExperienceRepository>();
+            services.AddScoped<IExperienceService,ExperienceService>();
+
+            services.AddScoped<IComplaintRepository, ComplaintRepository>();
+            services.AddScoped<IComplaintService, ComplaintService>();
+
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

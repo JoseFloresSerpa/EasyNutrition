@@ -13,9 +13,10 @@ namespace EasyNutrition.API.Mapping
         public ModelToResourceProfile()
         {
             CreateMap<Role, RoleResource>();
-
             CreateMap<User, UserResource>();
-             
+
+            CreateMap<Complaint, ComplaintResource>();
+            CreateMap<Experience, ExperienceResource>();
         }
     }
 }
