@@ -20,5 +20,7 @@ namespace EasyNutrition.API.Resources
         public string Linkedin { get; set; }
 
         public RoleResource Role { get; set; }
+
+        public SubscriptionResource  Subscription { get; set; }
     }
 }

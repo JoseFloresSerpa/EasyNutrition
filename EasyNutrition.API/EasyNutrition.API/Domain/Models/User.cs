@@ -22,5 +22,8 @@ namespace EasyNutrition.API.Domain.Models
         public int RoleId { get; set; }
         public Role Role { get; set; }
 
+        public int SubscriptionId { get; set; }
+        public Subscription Subscription { get; set; }
+
     }
 }

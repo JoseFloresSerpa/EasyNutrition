@@ -29,6 +29,11 @@ namespace EasyNutrition.API.Services
             return await _userRepository.ListByRoleIdAsync(roleId);
         }
 
+        public async Task<IEnumerable<User>> ListBySubscriptionIdAsync(int subscriptionId)
+        {
+            return await _userRepository.ListBySubscriptionIdAsync(subscriptionId);
+        }
+
         public async Task<UserResponse> GetByIdAsync(int id)
         {
             var existingUser = await _userRepository.FindById(id);

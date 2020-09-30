@@ -14,6 +14,8 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Subscription> Subscriptions { get; set; }
+
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -75,12 +77,42 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
               .WithMany(p => p.Users)
               .HasForeignKey(pt => pt.RoleId);
 
-            // Agregar data a User
-            builder.Entity<User>().HasData
+            builder.Entity<User>()
+             .HasOne(pt => pt.Subscription)
+             .WithMany(p => p.Users)
+             .HasForeignKey(pt => pt.SubscriptionId);
+
+    builder.Entity<User>().HasData
                 (
                     new User { Id = 1, Username = "AlfredoGomez", Password = "Gomez", Name= "Alfredo", Lastname="Gomez",Birthday="10/10/1980",Email="alfredito@gmail.com", Phone="97531546",Address="Las Malvinas 123",Active=true, Linkedin="https:\\afjaowjfiawj.com" , RoleId=1}
                     
                 );
+            // Entidad Role
+
+            builder.Entity<Subscription>().ToTable("Subscriptions");
+            builder.Entity<Subscription>().HasKey(p => p.Id);
+            builder.Entity<Subscription>().Property(p => p.Id)
+                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Subscription>().Property(p => p.maxSessions);
+            builder.Entity<Subscription>().Property(p => p.price);
+            builder.Entity<Subscription>().Property(p => p.active);
+
+
+            builder.Entity<Subscription>()
+                .HasMany(p => p.Users)
+                .WithOne(p => p.Subscription)
+                .HasForeignKey(p => p.SubscriptionId);
+
+
+            // Agregar data a Subscription
+            builder.Entity<Subscription>().HasData
+                (
+                    new Subscription { Id = 1, maxSessions = 4, price=10, active=true}
+                   
+                );
+
+            // Agregar data a User
+        
 
 
 
