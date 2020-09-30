@@ -4,7 +4,6 @@ using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Domain.Services.Communication;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EasyNutrition.API.Services
@@ -12,7 +11,7 @@ namespace EasyNutrition.API.Services
     public class SubscriptionService : ISubscriptionService
     {
         private readonly ISubscriptionRepository _subscriptionRepository;
-        public readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
         public SubscriptionService(ISubscriptionRepository subscriptionRepository, IUnitOfWork unitOfWork)
         {
@@ -24,6 +23,13 @@ namespace EasyNutrition.API.Services
         {
             return await _subscriptionRepository.ListAsync();
         }
+
+        public async Task<IEnumerable<Subscription>> ListByUserIdAsync(int userId)
+        {
+            return await _subscriptionRepository.ListByUserIdAsync(userId);
+        }
+
+
 
         public async Task<SubscriptionResponse> GetByIdAsync(int id)
         {
@@ -50,17 +56,13 @@ namespace EasyNutrition.API.Services
             }
         }
 
-        public async Task<SubscriptionResponse> UpdateAsync(int id, Subscription subscription)
+        public async Task<SubscriptionResponse> UpdateAsync(int userId, Subscription subscription)
         {
-            var existingSubscription = await _subscriptionRepository.FindById(id);
+            var existingSubscription = await _subscriptionRepository.FindById(userId);
             if (existingSubscription == null)
                 return new SubscriptionResponse("Subscription not found");
 
             existingSubscription.maxSessions = subscription.maxSessions;
-            existingSubscription.price = subscription.price;
-            existingSubscription.active = subscription.active;
-
-
 
             try
             {
@@ -94,5 +96,7 @@ namespace EasyNutrition.API.Services
                 return new SubscriptionResponse($"An error ocurred while deleting subscription: {ex.Message}");
             }
         }
+
+
     }
 }

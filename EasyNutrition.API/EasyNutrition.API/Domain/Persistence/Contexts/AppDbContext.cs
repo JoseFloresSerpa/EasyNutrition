@@ -50,8 +50,7 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             builder.Entity<User>().ToTable("Users");
             builder.Entity<User>().HasKey(p => p.Id);
-            builder.Entity<User>().Property(p => p.Id)
-                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(p => p.Id);
             builder.Entity<User>().Property(p => p.Username)
                 .IsRequired().HasMaxLength(20);
             builder.Entity<User>().Property(p => p.Password)
@@ -78,36 +77,39 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
               .HasForeignKey(pt => pt.RoleId);
 
             builder.Entity<User>()
-             .HasOne(pt => pt.Subscription)
-             .WithMany(p => p.Users)
-             .HasForeignKey(pt => pt.SubscriptionId);
+             .HasMany(pt => pt.Subscriptions)
+             .WithOne(p => p.User)
+             .HasForeignKey(pt => pt.UserId);
 
     builder.Entity<User>().HasData
                 (
-                    new User { Id = 1, Username = "AlfredoGomez", Password = "Gomez", Name= "Alfredo", Lastname="Gomez",Birthday="10/10/1980",Email="alfredito@gmail.com", Phone="97531546",Address="Las Malvinas 123",Active=true, Linkedin="https:\\afjaowjfiawj.com" , RoleId=1}
-                    
+                    new User { Id = 1, Username = "AlfredoGomez", Password = "Gomez", Name= "Alfredo", Lastname="Gomez",Birthday="10/10/1980",Email="alfredito@gmail.com", Phone="97531546",Address="Las Malvinas 123",Active=true, Linkedin="https:\\afjaowjfiawj.com" , RoleId=1},
+                     new User { Id = 2, Username = "AlfredoGomez", Password = "Gomez", Name = "Alfredo", Lastname = "Gomez", Birthday = "10/10/1980", Email = "alfredito@gmail.com", Phone = "97531546", Address = "Las Malvinas 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 }
+
+
                 );
-            // Entidad Role
+            // Entidad Subscription
 
             builder.Entity<Subscription>().ToTable("Subscriptions");
             builder.Entity<Subscription>().HasKey(p => p.Id);
-            builder.Entity<Subscription>().Property(p => p.Id)
-                .IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Subscription>().Property(p => p.maxSessions);
-            builder.Entity<Subscription>().Property(p => p.price);
-            builder.Entity<Subscription>().Property(p => p.active);
+            builder.Entity<Subscription>().Property(p => p.Id);
+            builder.Entity<Subscription>().Property(p => p.maxSessions)
+                .IsRequired();
+            builder.Entity<Subscription>().Property(p => p.price)
+                  .IsRequired();
+            builder.Entity<Subscription>().Property(p => p.active)
+                .IsRequired();
 
 
             builder.Entity<Subscription>()
-                .HasMany(p => p.Users)
-                .WithOne(p => p.Subscription)
-                .HasForeignKey(p => p.SubscriptionId);
-
+             .HasOne(pt => pt.User)
+             .WithMany(p => p.Subscriptions)
+             .HasForeignKey(pt => pt.UserId);
 
             // Agregar data a Subscription
             builder.Entity<Subscription>().HasData
                 (
-                    new Subscription { Id = 1, maxSessions = 4, price=10, active=true}
+                    new Subscription { Id = 1, maxSessions = 4, price = 10, active= true , UserId= 1}
                    
                 );
 

@@ -21,6 +21,5 @@ namespace EasyNutrition.API.Resources
 
         public RoleResource Role { get; set; }
 
-        public SubscriptionResource  Subscription { get; set; }
     }
 }

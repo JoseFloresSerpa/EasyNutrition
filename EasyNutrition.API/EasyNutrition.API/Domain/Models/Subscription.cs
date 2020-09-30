@@ -16,7 +16,8 @@ namespace EasyNutrition.API.Domain.Models
         // public DateTime updatedAt { get; set; }
 
 
-        public IList<User> Users { get; set; } = new List<User>();
+        public int UserId { get; set; }
+        public User User { get; set; }
 
     }
 }

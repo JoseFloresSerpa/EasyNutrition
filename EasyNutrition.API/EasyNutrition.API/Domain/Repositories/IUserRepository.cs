@@ -12,7 +12,6 @@ namespace EasyNutrition.API.Domain.Repositories
         Task<IEnumerable<User>> ListAsync();
         Task<IEnumerable<User>> ListByRoleIdAsync(int roleId);
 
-        Task<IEnumerable<User>> ListBySubscriptionIdAsync(int subscriptionId);
         Task AddAsync(User user);
         Task<User> FindById(int id);
         void Update(User user);

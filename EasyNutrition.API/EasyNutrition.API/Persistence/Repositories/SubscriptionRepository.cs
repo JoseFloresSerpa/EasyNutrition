@@ -16,19 +16,28 @@ namespace EasyNutrition.API.Persistence.Repositories
         {
         }
 
+    
+        public async Task<IEnumerable<Subscription>> ListAsync()
+        {
+            return await _context.Subscriptions.Include(p=> p.User).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Subscription>> ListByUserIdAsync(int userId)
+        {
+            return await _context.Subscriptions
+                .Where(p => p.UserId == userId)
+                .Include(p => p.User)
+                .ToListAsync();
+        }
+
         public async Task AddAsync(Subscription subscription)
         {
             await _context.Subscriptions.AddAsync(subscription);
         }
 
-        public async Task<Subscription> FindById(int id)
+        public async Task<Subscription> FindById(int userId)
         {
-            return await _context.Subscriptions.FindAsync(id);
-        }
-
-        public async Task<IEnumerable<Subscription>> ListAsync()
-        {
-            return await _context.Subscriptions.ToListAsync();
+            return await _context.Subscriptions.FindAsync(userId);
         }
 
         public void Remove(Subscription subscription)
