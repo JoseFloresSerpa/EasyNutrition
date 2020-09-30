@@ -14,6 +14,7 @@ namespace EasyNutrition.API.Mapping
         {
             CreateMap<SaveRoleResource, Role>();
             CreateMap<SaveUserResource, User>();
+            CreateMap<SaveSubscriptionResource, Subscription>();
         }
 
 

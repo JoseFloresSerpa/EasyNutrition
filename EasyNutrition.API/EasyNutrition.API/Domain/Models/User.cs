@@ -15,12 +15,15 @@ namespace EasyNutrition.API.Domain.Models
         public string Birthday { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+
         public string Address { get; set; }
         public bool Active { get; set; }
         public string Linkedin { get; set; }
 
         public int RoleId { get; set; }
         public Role Role { get; set; }
+
+        public IList<Subscription> Subscriptions { get; set; } = new List<Subscription>();
 
     }
 }
