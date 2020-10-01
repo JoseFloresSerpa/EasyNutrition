@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SEwNWoic7+EFD2Q35yQsSPfdm3ABfvZMQyC9FX/pTTdGVWhEk/74YzhdK+M1haUiQe2KwR0pssKo18l9XwE3GQ==",
+  "dgSpecHash": "cz0iCTV/E3fS4Lam2KGdpdiSWuGkF87WTaU33R9zDdWYiXO/a5WxwHiqZOJZb8uQ2CvJxwIGPyJkGePnR/6BtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NamaeNoAi\\Source\\Repos\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+  "projectFilePath": "C:\\Users\\NamaeNoAi\\Documents\\Github\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NamaeNoAi\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\NamaeNoAi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",

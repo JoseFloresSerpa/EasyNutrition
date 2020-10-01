@@ -20,7 +20,7 @@ namespace EasyNutrition.API.Controllers
     {
         private readonly IComplaintService _complaintService;
         private readonly IMapper _mapper;
-        
+
         public ComplaintController(IComplaintService complaintService, IMapper mapper)
         {
             _complaintService = complaintService;
@@ -61,6 +61,43 @@ namespace EasyNutrition.API.Controllers
             if (!result.Success)
                 return BadRequest(result.Message);
 
+            var complaintResource = _mapper.Map<Complaint, ComplaintResource>(result.Resource);
+            return Ok(complaintResource);
+        }
+
+        [SwaggerOperation(
+            Summary = "Update Complaint",
+            Description = "Update a complaint",
+            OperationId = "UpdateComplaint",
+            Tags = new[] { "Complaint" })]
+        [SwaggerResponse(200, "Update Complaint", typeof(IEnumerable<ComplaintResource>))]
+        [HttpPut("{id}")]
+        [ProducesResponseType(typeof(IEnumerable<ComplaintResource>), 200)]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] SaveComplaintResource resource)
+        {
+            var complaint = _mapper.Map<SaveComplaintResource, Complaint>(resource);
+            var result = await _complaintService.UpdateAsync(id, complaint);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+            var complaintResource = _mapper.Map<Complaint, ComplaintResource>(result.Resource);
+            return Ok(complaintResource);
+        }
+
+
+        [SwaggerOperation(
+        Summary = "Delete complaint",
+        Description = "Delete a complaint",
+        OperationId = "DeleteComplaint",
+        Tags = new[] { "Complaint" })]
+        [SwaggerResponse(200, "Delete Complaint", typeof(IEnumerable<ComplaintResource>))]
+        [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(IEnumerable<ComplaintResource>), 200)]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var result = await _complaintService.DeleteAsync(id);
+            if (!result.Success)
+                return BadRequest(result.Message);
             var complaintResource = _mapper.Map<Complaint, ComplaintResource>(result.Resource);
             return Ok(complaintResource);
         }

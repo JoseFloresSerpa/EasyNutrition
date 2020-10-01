@@ -11,6 +11,10 @@ namespace EasyNutrition.API.Domain.Repositories
         Task<IEnumerable<Complaint>> ListAsync();
 
         Task AddAsync(Complaint complaint);
+        Task<Complaint> FindById(int id);
+        void Update(Complaint complaint);
+
+        void Remove(Complaint complaint);
 
     }
 

@@ -12,6 +12,12 @@ namespace EasyNutrition.API.Domain.Services
         Task<IEnumerable<Complaint>> ListAsync();
         Task<ComplaintResponse> SaveAsync(Complaint complaint);
 
+        Task<ComplaintResponse> UpdateAsync(int id, Complaint complaint);
+
+        Task<ComplaintResponse> DeleteAsync(int id);
+
+
+
     }
 
 

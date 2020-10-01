@@ -26,9 +26,20 @@ namespace EasyNutrition.API.Persistence.Repositories
             await _context.Complaint.AddAsync(complaint);
         }
 
+        public async Task<Complaint> FindById(int id)
+        {
+            return await _context.Complaint.FindAsync(id);
+        }
 
+        public void Update(Complaint complaint)
+        {
+            _context.Complaint.Update(complaint);
+        }
 
-
+        public void Remove(Complaint complaint)
+        {
+            _context.Complaint.Remove(complaint);
+        }
     }
 
 }

@@ -1110,11 +1110,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NamaeNoAi\\Source\\Repos\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "projectUniqueName": "C:\\Users\\NamaeNoAi\\Documents\\Github\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
       "projectName": "EasyNutrition.API",
-      "projectPath": "C:\\Users\\NamaeNoAi\\Source\\Repos\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "projectPath": "C:\\Users\\NamaeNoAi\\Documents\\Github\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
       "packagesPath": "C:\\Users\\NamaeNoAi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NamaeNoAi\\Source\\Repos\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
+      "outputPath": "C:\\Users\\NamaeNoAi\\Documents\\Github\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

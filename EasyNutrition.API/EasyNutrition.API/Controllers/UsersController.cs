@@ -102,6 +102,8 @@ namespace EasyNutrition.API.Controllers
             var userResource = _mapper.Map<User, UserResource>(result.Resource);
             return Ok(userResource);
         }
+
+
     }
 
 
