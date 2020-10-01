@@ -37,3 +37,5 @@ EasyNutrition.API/EasyNutrition.API/bin/Debug/netcoreapp3.1/EasyNutrition.API.dl
 EasyNutrition.API/EasyNutrition.API/bin/Debug/netcoreapp3.1/EasyNutrition.API.pdb
 EasyNutrition.API/EasyNutrition.API/obj/Debug/netcoreapp3.1/EasyNutrition.API.dll
 EasyNutrition.API/EasyNutrition.API/obj/Debug/netcoreapp3.1/EasyNutrition.API.pdb
+EasyNutrition.API/.vs/EasyNutrition.API/v16/.suo
+*.cache
