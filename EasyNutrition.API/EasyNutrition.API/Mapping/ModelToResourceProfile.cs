@@ -18,7 +18,7 @@ namespace EasyNutrition.API.Mapping
 
             CreateMap<Subscription, SubscriptionResource>();
 
-
+            CreateMap<AvailableSchedule, AvailableScheduleResource>();
         }
     }
 }

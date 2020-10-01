@@ -16,6 +16,7 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
         public DbSet<Subscription> Subscriptions { get; set; }
 
+        public DbSet<AvailableSchedule> AvailableSchedules { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -85,7 +86,14 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithOne(p => p.User)
              .HasForeignKey(pt => pt.UserId);
 
-    builder.Entity<User>().HasData
+              builder.Entity<User>()
+            .HasMany(pt => pt.AvailableSchedules)
+            .WithOne(p => p.User)
+            .HasForeignKey(pt => pt.UserId);
+
+
+
+            builder.Entity<User>().HasData
                 (
                     new User { Id = 1, Username = "AlfredoGomez", Password = "Gomez", Name= "Alfredo", Lastname="Gomez",Birthday="10/10/1980",Email="alfredito@gmail.com", Phone="97531546",Address="Las Malvinas 123",Active=true, Linkedin="https:\\afjaowjfiawj.com" , RoleId=1},
                      new User { Id = 2, Username = "AlfredoGomez", Password = "Gomez", Name = "Alfredo", Lastname = "Gomez", Birthday = "10/10/1980", Email = "alfredito@gmail.com", Phone = "97531546", Address = "Las Malvinas 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 }
@@ -113,13 +121,36 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             // Agregar data a Subscription
             builder.Entity<Subscription>().HasData
                 (
-                    new Subscription { Id = 1, maxSessions = 4, price = 10, active= true , UserId= 1}
-                   
+                    new Subscription { Id = 1, maxSessions = 4, price = 10, active= true , UserId= 1},
+                    new Subscription { Id = 2, maxSessions = 1, price = 13, active = true, UserId = 2 }
+
                 );
 
-            // Agregar data a User
-        
+            // Entidad AvailableSchedule
 
+            builder.Entity<AvailableSchedule>().ToTable("AvailableSchedules");
+            builder.Entity<AvailableSchedule>().HasKey(p => p.Id);
+            builder.Entity<AvailableSchedule>().Property(p => p.Id);
+            builder.Entity<AvailableSchedule>().Property(p => p.startAt)
+                .IsRequired();
+            builder.Entity<AvailableSchedule>().Property(p => p.endAt)
+                  .IsRequired();
+            builder.Entity<AvailableSchedule>().Property(p => p.state)
+                .IsRequired();
+
+
+            builder.Entity<AvailableSchedule>()
+             .HasOne(pt => pt.User)
+             .WithMany(p => p.AvailableSchedules)
+             .HasForeignKey(pt => pt.UserId);
+
+            // Agregar data a AvailableSchedule
+            builder.Entity<AvailableSchedule>().HasData
+                (
+                    new AvailableSchedule { Id = 1, startAt = "Friday, February 22, 2019 2:00:55 PM", endAt = "Friday, February 22, 2019 2:40:55 PM", state = true, UserId = 1 },
+                    new AvailableSchedule { Id = 2, startAt = "Friday, February 22, 2019 5:00:55 PM", endAt = "Friday, February 22, 2019 6:40:55 PM", state = true, UserId = 2 }
+
+                );
 
 
 

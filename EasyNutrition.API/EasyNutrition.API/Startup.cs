@@ -47,6 +47,8 @@ namespace EasyNutrition.API
             services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
             services.AddScoped<ISubscriptionService, SubscriptionService>();
 
+            services.AddScoped<IAvailableScheduleRepository, AvailableScheduleRepository>();
+            services.AddScoped<IAvailableScheduleService, AvailableScheduleService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
