@@ -163,6 +163,7 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                   new Complaint { Id = 1, Description = "Descripcion de prueba complaint", ExperienceId = 1 }
               );
 
+
             builder.Entity<AvailableSchedule>()
              .HasOne(pt => pt.User)
              .WithMany(p => p.AvailableSchedules)

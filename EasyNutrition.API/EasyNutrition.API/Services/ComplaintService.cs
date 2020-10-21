@@ -39,7 +39,7 @@ namespace EasyNutrition.API.Services
             }
             catch (Exception ex)
             {
-                return new ComplaintResponse($"An error ocurred while saving user: {ex.Message}");
+                return new ComplaintResponse($"An error ocurred while saving complaint: {ex.Message}");
             }
         }
 
@@ -63,8 +63,6 @@ namespace EasyNutrition.API.Services
             {
                 return new ComplaintResponse($"An error ocurred while updating complaint: {ex.Message}");
             }
-
-
 
         }
 

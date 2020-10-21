@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyNutrition.API.Resources
 {
-    public class SaveComplaintResource
+    public class SaveExperienceResource
     {
         [Required]
         [MaxLength(50)]
@@ -15,8 +15,6 @@ namespace EasyNutrition.API.Resources
         [Required]
         [MaxLength(50)]
         public string Description { get; set; }
-
-  
     }
 
 }

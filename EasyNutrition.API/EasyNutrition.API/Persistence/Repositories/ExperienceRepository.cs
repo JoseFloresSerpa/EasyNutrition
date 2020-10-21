@@ -18,6 +18,26 @@ namespace EasyNutrition.API
             return await _context.Experience.ToListAsync();
         }
 
+        public async Task AddAsync(Experience experience)
+        {
+            await _context.Experience.AddAsync(experience);
+        }
+
+        public async Task<Experience> FindById(int id)
+        {
+            return await _context.Experience.FindAsync();
+        }
+
+        public void Update(Experience experience)
+        {
+            _context.Experience.Update(experience);
+        }
+
+        public void Remove(Experience experience)
+        {
+            _context.Experience.Remove(experience);
+        }
+
     }
 
 }
