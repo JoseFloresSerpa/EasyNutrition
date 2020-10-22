@@ -38,6 +38,8 @@ namespace EasyNutrition.API
             {
                 options.UseInMemoryDatabase("easynutrition-api-in-memory");
             });
+
+
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IRoleService, RoleService>();
 
@@ -45,6 +47,7 @@ namespace EasyNutrition.API
             services.AddScoped<IUserService, UserService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
             services.AddAutoMapper(typeof(Startup));
 
