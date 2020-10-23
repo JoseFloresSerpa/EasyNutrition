@@ -23,17 +23,17 @@ namespace EasyNutrition.API.Domain.Models
         public int RoleId { get; set; }
         public Role Role { get; set; }
 
-<<<<<<< HEAD
+
 
         public IList<Session> Sessions { get; set; } = new List<Session>();
 
         public IList<SessionDetail> SessionDetails { get; set; } = new List<SessionDetail>();
-=======
+
         public IList<Subscription> Subscriptions { get; set; } = new List<Subscription>();
 
         public IList<AvailableSchedule> AvailableSchedules { get; set; } = new List<AvailableSchedule>();
 
->>>>>>> origin/develop
+
 
     }
    

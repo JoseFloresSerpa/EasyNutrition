@@ -175,8 +175,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.AvailableSchedules)
              .HasForeignKey(pt => pt.UserId);
 
-<<<<<<< HEAD
-            // Entidad Session
 
             builder.Entity<Session>().ToTable("Session");
             builder.Entity<Session>().HasKey(p => p.Id);
@@ -224,8 +222,7 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             .HasOne(pt => pt.Session)
             .WithMany(p => p.SessionDetails)
             .HasForeignKey(pt => pt.SessionId);
-=======
-            // Agregar data a AvailableSchedule
+
             builder.Entity<AvailableSchedule>().HasData
                 (
                     new AvailableSchedule { Id = 1, startAt = "Friday, February 22, 2019 2:00:55 PM", endAt = "Friday, February 22, 2019 2:40:55 PM", state = true, UserId = 1 },
@@ -233,10 +230,9 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
                 );
 
-            // develop
->>>>>>> origin/develop
 
-            // Agregar data a SessionDetail
+
+          
             builder.Entity<SessionDetail>().HasData
                 (
                     new SessionDetail { Id = 1, State = "Disponible", UserId = 1, SessionId = 1 },
