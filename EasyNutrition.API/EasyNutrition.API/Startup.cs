@@ -8,6 +8,7 @@ using EasyNutrition.API.Domain.Repositories;
 using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Extensions;
 using EasyNutrition.API.Persistence.Repositories;
+using EasyNutrition.API.Resources;
 using EasyNutrition.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,7 +37,8 @@ namespace EasyNutrition.API
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseInMemoryDatabase("easynutrition-api-in-memory");
+                //options.UseInMemoryDatabase("easynutrition-api-in-memory");
+                options.UseMySQL(Configuration.GetConnectionString("MySQLConnection"));
             });
 
 
@@ -46,6 +48,7 @@ namespace EasyNutrition.API
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
 
+<<<<<<< HEAD
 
             services.AddScoped<ISessionRepository, SessionRepository>();
             services.AddScoped<ISessionService, SessionService>();
@@ -53,6 +56,22 @@ namespace EasyNutrition.API
             services.AddScoped<ISessionDetailRepository, SessionDetailRepository>();
             services.AddScoped<ISessionDetailService, SessionDetailService>();
 
+=======
+// HEAD
+            services.AddScoped<IExperienceRepository, ExperienceRepository>();
+            services.AddScoped<IExperienceService,ExperienceService>();
+
+            services.AddScoped<IComplaintRepository, ComplaintRepository>();
+            services.AddScoped<IComplaintService, ComplaintService>();
+
+
+            services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+            services.AddScoped<ISubscriptionService, SubscriptionService>();
+
+            services.AddScoped<IAvailableScheduleRepository, AvailableScheduleRepository>();
+            services.AddScoped<IAvailableScheduleService, AvailableScheduleService>();
+// develop
+>>>>>>> origin/develop
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
