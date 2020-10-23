@@ -46,6 +46,14 @@ namespace EasyNutrition.API
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
 
+
+            services.AddScoped<ISessionRepository, SessionRepository>();
+            services.AddScoped<ISessionService, SessionService>();
+
+            services.AddScoped<ISessionDetailRepository, SessionDetailRepository>();
+            services.AddScoped<ISessionDetailService, SessionDetailService>();
+
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 

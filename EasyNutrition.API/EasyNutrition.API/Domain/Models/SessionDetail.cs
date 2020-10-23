@@ -7,19 +7,15 @@ namespace EasyNutrition.API.Domain.Models
 {
     public class SessionDetail
     {
-
         public int Id { get; set; }
 
         public string State { get; set; }
 
+
         public int SessionId { get; set; }
+        public Session Session { set; get; }
 
-        public Session Session { get; set; }
-
-        public string UserId { get; set; }
-
+        public int UserId { get; set; }
         public User User { get; set; }
-
-        public IList<Session> Sessions { get; set; } = new List<Session>();
     }
 }

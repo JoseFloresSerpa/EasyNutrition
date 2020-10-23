@@ -15,7 +15,11 @@ namespace EasyNutrition.API.Mapping
             CreateMap<Role, RoleResource>();
 
             CreateMap<User, UserResource>();
-             
+
+            CreateMap<Session, SessionResource>();
+
+            CreateMap<SessionDetail, SessionDetailResource>();
+
         }
     }
 }

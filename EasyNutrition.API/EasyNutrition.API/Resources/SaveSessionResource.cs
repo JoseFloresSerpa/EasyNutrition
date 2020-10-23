@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace EasyNutrition.API.Domain.Models
+namespace EasyNutrition.API.Resources
 {
-    public class Session
+    public class SaveSessionResource
     {
+
         public int Id { get; set; }
         public string StartAt { get; set; }
         public string EndAt { get; set; }
 
+        [Required]
+        [MaxLength(100)]
         public string Link { get; set; }
-
-        public int UserId { get; set; }
-        public User User { get; set; }
-
-        public IList<SessionDetail> SessionDetails { get; set; } = new List<SessionDetail>();
     }
 }
