@@ -1103,23 +1103,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jose_\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rodri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "projectUniqueName": "D:\\Aplicaciones Web\\GitRama diet\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
       "projectName": "EasyNutrition.API",
-      "projectPath": "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
-      "packagesPath": "C:\\Users\\jose_\\.nuget\\packages\\",
-      "outputPath": "E:\\UPC\\2020-2\\APLICACIONES WEB\\Proyecto\\Proyecto Desarrollo\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
+      "projectPath": "D:\\Aplicaciones Web\\GitRama diet\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
+      "outputPath": "D:\\Aplicaciones Web\\GitRama diet\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\jose_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1194,7 +1190,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
