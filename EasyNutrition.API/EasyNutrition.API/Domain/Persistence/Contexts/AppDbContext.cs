@@ -149,9 +149,9 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                 .IsRequired().HasMaxLength(50);
 
             builder.Entity<Complaint>()
-             .HasOne(pt => pt.Experience)
+             .HasOne(pt => pt.User)
              .WithMany(p => p.Complaints)
-             .HasForeignKey(pt => pt.ExperienceId);
+             .HasForeignKey(pt => pt.UserId);
 
             // Agregar data a Complaint
             builder.Entity<Complaint>().HasData
@@ -251,9 +251,9 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                 .IsRequired().HasMaxLength(50);
 
             builder.Entity<Experience>()
-             .HasMany(p => p.Complaints)
-             .WithOne(p => p.Experience)
-             .HasForeignKey(p => p.ExperienceId);
+             .HasOne(pt => pt.User)
+             .WithMany(p => p.Experiences)
+             .HasForeignKey(pt => pt.UserId);
 
             // Agregar data a Experience
             builder.Entity<Experience>().HasData

@@ -33,7 +33,8 @@ namespace EasyNutrition.API.Domain.Models
 
         public IList<AvailableSchedule> AvailableSchedules { get; set; } = new List<AvailableSchedule>();
 
-
+        public IList<Complaint> Complaints { get; set; } = new List<Complaint>();
+        public IList<Experience> Experiences { get; set; } = new List<Experience>();
 
     }
    

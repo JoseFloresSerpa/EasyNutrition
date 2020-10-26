@@ -13,7 +13,8 @@ namespace EasyNutrition.API.Domain.Models
   
         public int ExperienceId { get; set; }
         public Experience Experience { get; set; }
-
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 
 
