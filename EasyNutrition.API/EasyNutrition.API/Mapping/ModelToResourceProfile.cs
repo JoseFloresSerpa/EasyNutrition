@@ -9,13 +9,27 @@ using System.Threading.Tasks;
 namespace EasyNutrition.API.Mapping
 {
     public class ModelToResourceProfile : Profile
-    {   
+    {
         public ModelToResourceProfile()
         {
             CreateMap<Role, RoleResource>();
-
             CreateMap<User, UserResource>();
-             
+
+
+            CreateMap<Session, SessionResource>();
+
+            CreateMap<SessionDetail, SessionDetailResource>();
+
+
+            CreateMap<Complaint, ComplaintResource>();
+            CreateMap<Experience, ExperienceResource>();
+
+            CreateMap<Subscription, SubscriptionResource>();
+
+            CreateMap<AvailableSchedule, AvailableScheduleResource>();
+
+            CreateMap<Diet, DietResource>();
+            CreateMap<Progress, ProgressResource>();
         }
     }
 }

@@ -26,9 +26,7 @@ namespace EasyNutrition.API.Persistence.Repositories
                 .Where(p => p.RoleId == roleId)
                 .Include(p => p.Role)
                 .ToListAsync();
-
         }
-
         public async Task AddAsync(User user)
         {
             await _context.Users.AddAsync(user);
