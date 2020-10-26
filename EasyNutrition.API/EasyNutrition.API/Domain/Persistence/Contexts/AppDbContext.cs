@@ -14,20 +14,15 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
         public DbSet<User> Users { get; set; }
 
-    //HEAD
         public DbSet<Complaint> Complaint { get; set; }
         public DbSet<Experience> Experience { get; set; }
-    //
         public DbSet<Subscription> Subscriptions { get; set; }
 
         public DbSet<AvailableSchedule> AvailableSchedules { get; set; }
-    // develop
 
         public DbSet<Session> Sessions { get; set; }
 
         public DbSet<SessionDetail> SessionDetails { get; set; }
-
-
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -58,8 +53,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                     new Role { Id = 2, Name = "Cliente" },
                     new Role { Id = 3, Name = "Administrador" },
                     new Role { Id = 4, Name = "Invitado" }
-
-
                 );
 
             // Entidad User
@@ -162,7 +155,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.Complaints)
              .HasForeignKey(pt => pt.ExperienceId);
 
-            //HEAD
             // Agregar data a Complaint
             builder.Entity<Complaint>().HasData
               (
@@ -230,9 +222,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
                 );
 
-
-
-          
             builder.Entity<SessionDetail>().HasData
                 (
                     new SessionDetail { Id = 1, State = "Disponible", UserId = 1, SessionId = 1 },
@@ -262,7 +251,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                   new Experience { Id = 1, Name = "Nombre",Description = "Descripcion de prueba experience" }
 
               );
-
 
             // Apply Naming Conventions Policy
 

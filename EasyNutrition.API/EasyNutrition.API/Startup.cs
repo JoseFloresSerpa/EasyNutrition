@@ -37,8 +37,8 @@ namespace EasyNutrition.API
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseInMemoryDatabase("easynutrition-api-in-memory");
-                //options.UseMySQL(Configuration.GetConnectionString("MySQLConnection"));
+                //options.UseInMemoryDatabase("easynutrition-api-in-memory");
+                options.UseMySQL(Configuration.GetConnectionString("MySQLConnection"));
             });
 
 

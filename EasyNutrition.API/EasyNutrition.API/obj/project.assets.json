@@ -6445,19 +6445,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dino\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dino\\Dropbox\\Mi PC (LAPTOP-AEERCSS6)\\Documents\\GitHub\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "projectUniqueName": "E:\\Proyectos Programación\\C#\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
       "projectName": "EasyNutrition.API",
-      "projectPath": "C:\\Users\\Dino\\Dropbox\\Mi PC (LAPTOP-AEERCSS6)\\Documents\\GitHub\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
-      "packagesPath": "C:\\Users\\Dino\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dino\\Dropbox\\Mi PC (LAPTOP-AEERCSS6)\\Documents\\GitHub\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
+      "projectPath": "E:\\Proyectos Programación\\C#\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "E:\\Proyectos Programación\\C#\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6536,16 +6536,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\Dino\\Dropbox\\Mi PC (LAPTOP-AEERCSS6)\\Documents\\GitHub\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
