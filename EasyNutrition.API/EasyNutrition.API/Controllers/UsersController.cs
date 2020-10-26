@@ -42,7 +42,6 @@ namespace EasyNutrition.API.Controllers
             return resources;
         }
 
-
         [SwaggerOperation(
                Summary = "Add user",
                Description = "Add new user",
@@ -103,5 +102,9 @@ namespace EasyNutrition.API.Controllers
             var userResource = _mapper.Map<User, UserResource>(result.Resource);
             return Ok(userResource);
         }
+
+
     }
+
+
 }
