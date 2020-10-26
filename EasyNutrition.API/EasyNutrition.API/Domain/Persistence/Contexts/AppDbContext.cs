@@ -11,22 +11,13 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
     public class AppDbContext : DbContext
     {
         public DbSet<Role> Roles { get; set; }
-
         public DbSet<User> Users { get; set; }
-
-    //HEAD
         public DbSet<Complaint> Complaint { get; set; }
         public DbSet<Experience> Experience { get; set; }
-    //
         public DbSet<Subscription> Subscriptions { get; set; }
-
         public DbSet<AvailableSchedule> AvailableSchedules { get; set; }
-    // develop
-
         public DbSet<Session> Sessions { get; set; }
-
         public DbSet<SessionDetail> SessionDetails { get; set; }
-
         public DbSet<Diet> Diets { get; set; }
         public DbSet<Progress> Progresses { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -162,7 +153,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.Complaints)
              .HasForeignKey(pt => pt.ExperienceId);
 
-            //HEAD
             // Agregar data a Complaint
             builder.Entity<Complaint>().HasData
               (
