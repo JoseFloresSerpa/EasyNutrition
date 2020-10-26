@@ -40,13 +40,23 @@ namespace EasyNutrition.API
                 //options.UseInMemoryDatabase("easynutrition-api-in-memory");
                 options.UseMySQL(Configuration.GetConnectionString("MySQLConnection"));
             });
+
+
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IRoleService, RoleService>();
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
 
-// HEAD
+
+
+            services.AddScoped<ISessionRepository, SessionRepository>();
+            services.AddScoped<ISessionService, SessionService>();
+
+            services.AddScoped<ISessionDetailRepository, SessionDetailRepository>();
+            services.AddScoped<ISessionDetailService, SessionDetailService>();
+
+
             services.AddScoped<IExperienceRepository, ExperienceRepository>();
             services.AddScoped<IExperienceService,ExperienceService>();
 
@@ -59,9 +69,15 @@ namespace EasyNutrition.API
 
             services.AddScoped<IAvailableScheduleRepository, AvailableScheduleRepository>();
             services.AddScoped<IAvailableScheduleService, AvailableScheduleService>();
-// develop
+
+            services.AddScoped<IDietRepository, DietRepository>();
+            services.AddScoped<IDietService, DietService>();
+
+            services.AddScoped<IProgressRepository, ProgressRepository>();
+            services.AddScoped<IProgressService, ProgressService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
             services.AddAutoMapper(typeof(Startup));
 
@@ -71,7 +87,7 @@ namespace EasyNutrition.API
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+      
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

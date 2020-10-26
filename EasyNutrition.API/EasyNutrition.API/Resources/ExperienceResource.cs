@@ -1,5 +1,5 @@
-﻿
-namespace EasyNutrition.API.Resources
+
+﻿namespace EasyNutrition.API.Resources
 {
     public class ExperienceResource
     {

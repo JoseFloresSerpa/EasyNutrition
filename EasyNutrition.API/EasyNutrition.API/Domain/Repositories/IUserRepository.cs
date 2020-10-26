@@ -17,7 +17,5 @@ namespace EasyNutrition.API.Domain.Repositories
         void Update(User user);
         void Remove(User user);
 
-
-
     }
 }

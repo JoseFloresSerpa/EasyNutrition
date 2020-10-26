@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Domain.Models;
+using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Persistence.Contexts;
 using EasyNutrition.API.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -39,5 +39,4 @@ namespace EasyNutrition.API
         }
 
     }
-
 }

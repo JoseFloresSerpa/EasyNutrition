@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Domain.Models;
+using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Repositories;
 using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Domain.Services.Communication;
@@ -28,8 +28,6 @@ namespace EasyNutrition.API.Services
         {
             return await _subscriptionRepository.ListByUserIdAsync(userId);
         }
-
-
 
         public async Task<SubscriptionResponse> GetByIdAsync(int id)
         {

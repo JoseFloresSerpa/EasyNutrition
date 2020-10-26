@@ -11,18 +11,15 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
     public class AppDbContext : DbContext
     {
         public DbSet<Role> Roles { get; set; }
-
         public DbSet<User> Users { get; set; }
-
-    //HEAD
         public DbSet<Complaint> Complaint { get; set; }
         public DbSet<Experience> Experience { get; set; }
-    //
         public DbSet<Subscription> Subscriptions { get; set; }
-
         public DbSet<AvailableSchedule> AvailableSchedules { get; set; }
-    // develop
-
+        public DbSet<Session> Sessions { get; set; }
+        public DbSet<SessionDetail> SessionDetails { get; set; }
+        public DbSet<Diet> Diets { get; set; }
+        public DbSet<Progress> Progresses { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
@@ -156,7 +153,6 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.Complaints)
              .HasForeignKey(pt => pt.ExperienceId);
 
-            //HEAD
             // Agregar data a Complaint
             builder.Entity<Complaint>().HasData
               (
@@ -169,7 +165,63 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.AvailableSchedules)
              .HasForeignKey(pt => pt.UserId);
 
-            // Agregar data a AvailableSchedule
+
+            builder.Entity<Session>().ToTable("Session");
+            builder.Entity<Session>().HasKey(p => p.Id);
+            builder.Entity<Session>().Property(p => p.Id)
+                  .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Session>().Property(p => p.StartAt)
+                .IsRequired();
+            builder.Entity<Session>().Property(p => p.EndAt)
+                  .IsRequired();
+            builder.Entity<Session>().Property(p => p.Link)
+                  .IsRequired().HasMaxLength(100);
+
+
+
+            builder.Entity<Session>()
+             .HasOne(pt => pt.User)
+             .WithMany(p => p.Sessions)
+             .HasForeignKey(pt => pt.UserId);
+
+            builder.Entity<Session>()
+                .HasMany(p => p.Diets)
+                .WithOne(p => p.Session)
+                .HasForeignKey(p => p.SessionId);
+            builder.Entity<Session>()
+                .HasMany(p => p.Progresses)
+                .WithOne(p => p.Session)
+                .HasForeignKey(p => p.SessionId);
+
+            // Agregar data a Session
+            builder.Entity<Session>().HasData
+                (
+                    new Session { Id = 1, StartAt = "Monday, March 24,2019 17:00:00 PM", EndAt = "Monday, March 24 ,2019 18:00:00 PM", Link = "https" , UserId = 1 },
+                    new Session { Id = 2, StartAt = "Thursday, March 26,2019 20:00:00 PM", EndAt = "Thurday, March 26 ,2019 21:00:00 PM", Link = "https" , UserId = 2 }
+
+                );
+             
+
+            //Entidad SessionDetails
+
+            builder.Entity<SessionDetail>().ToTable("SessionDetail");
+            builder.Entity<SessionDetail>().HasKey(p => p.Id);
+            builder.Entity<SessionDetail>().Property(p => p.Id)
+                 .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<SessionDetail>().Property(p => p.State)
+               .IsRequired().HasMaxLength(100);
+
+
+            builder.Entity<SessionDetail>()
+             .HasOne(pt => pt.User)
+             .WithMany(p => p.SessionDetails)
+             .HasForeignKey(pt => pt.UserId);
+
+            builder.Entity<SessionDetail>()
+            .HasOne(pt => pt.Session)
+            .WithMany(p => p.SessionDetails)
+            .HasForeignKey(pt => pt.SessionId);
+
             builder.Entity<AvailableSchedule>().HasData
                 (
                     new AvailableSchedule { Id = 1, startAt = "Friday, February 22, 2019 2:00:55 PM", endAt = "Friday, February 22, 2019 2:40:55 PM", state = true, UserId = 1 },
@@ -177,8 +229,15 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
                 );
 
-            // develop
 
+
+          
+            builder.Entity<SessionDetail>().HasData
+                (
+                    new SessionDetail { Id = 1, State = "Disponible", UserId = 1, SessionId = 1 },
+                    new SessionDetail { Id = 2, State = "Disponible", UserId = 2, SessionId = 2 }
+
+                );
 
 
             //Entidad Experience
@@ -202,6 +261,41 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
                   new Experience { Id = 1, Name = "Nombre",Description = "Descripcion de prueba experience" }
 
               );
+
+
+            //Entidad Diet
+            builder.Entity<Diet>().ToTable("Diets");
+            builder.Entity<Diet>().HasKey(p => p.Id);
+            builder.Entity<Diet>().Property(p => p.Id)
+                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Diet>().Property(p => p.Title)
+                .IsRequired().HasMaxLength(50);
+            builder.Entity<Diet>().Property(p => p.Description)
+                .IsRequired().HasMaxLength(500);
+
+            // Agregar data a Diet
+            builder.Entity<Diet>().HasData
+                (
+                    new Diet { Id = 1, Title = "Dieta Vegetariana", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 1 },
+                    new Diet { Id = 2, Title = "Dieta para aumentar masa musuclar", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 2 }
+
+                );
+
+            //Entidad Progress
+            builder.Entity<Progress>().ToTable("Progresses");
+            builder.Entity<Progress>().HasKey(p => p.Id);
+            builder.Entity<Progress>().Property(p => p.Id)
+                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Progress>().Property(p => p.Description)
+                .IsRequired().HasMaxLength(500);
+
+            // Agregar data a Diet
+            builder.Entity<Progress>().HasData
+                (
+                    new Progress { Id = 1,  Description = "Bajó 4 kilos", SessionId = 1 },
+                    new Progress { Id = 2,  Description = "Aumentó su masa en 6 kilos", SessionId = 2 }
+
+                );
 
 
             // Apply Naming Conventions Policy

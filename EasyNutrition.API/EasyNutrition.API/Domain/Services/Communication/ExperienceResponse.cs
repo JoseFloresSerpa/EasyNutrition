@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Domain.Models;
+using EasyNutrition.API.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,3 +20,4 @@ namespace EasyNutrition.API.Domain.Services.Communication
     }
     
 }
+

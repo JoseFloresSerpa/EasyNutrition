@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+
+using AutoMapper;
 using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Extensions;
@@ -102,10 +103,6 @@ namespace EasyNutrition.API.Controllers
             return Ok(complaintResource);
         }
 
-
-
-
     }
-
 
 }

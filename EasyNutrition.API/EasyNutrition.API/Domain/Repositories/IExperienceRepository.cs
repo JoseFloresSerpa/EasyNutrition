@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Domain.Models;
+using EasyNutrition.API.Domain.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,6 +15,4 @@ namespace EasyNutrition.API
         void Remove(Experience experience);
 
     }
-
-
 }

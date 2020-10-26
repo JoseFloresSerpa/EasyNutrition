@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Domain.Models;
+using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Services.Communication;
 using System;
 using System.Collections.Generic;

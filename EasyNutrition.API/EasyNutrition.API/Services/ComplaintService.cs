@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Controllers;
+using EasyNutrition.API.Controllers;
 using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Repositories;
 using EasyNutrition.API.Domain.Services;

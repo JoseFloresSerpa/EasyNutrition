@@ -1,4 +1,4 @@
-﻿using EasyNutrition.API.Domain.Models;
+using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Services.Communication;
 using System;
 using System.Collections.Generic;
@@ -17,3 +17,4 @@ namespace EasyNutrition.API.Domain.Services
         Task<AvailableScheduleResponse> UpdateAsync(int id, AvailableSchedule availableSchedule);
     }
 }
+
