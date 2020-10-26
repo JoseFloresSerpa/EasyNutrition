@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,3 +17,23 @@ namespace EasyNutrition.API.Resources
 
 
 }
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace EasyNutrition.API.Resources
+{
+    public class ComplaintResource
+    {
+
+        public int Id { get; set; }
+        public string Description { get; set; }
+
+
+    }
+
+
+}
+>>>>>>> develop

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,3 +19,25 @@ namespace EasyNutrition.API.Resources
     }
 
 }
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace EasyNutrition.API.Resources
+{
+    public class SessionResource
+    {
+
+        public int Id { get; set; }
+        public string StartAt { get; set; }
+        public string EndAt { get; set; }
+
+        public string Link { get; set; }
+
+        public UserResource User { get; set; }
+    }
+
+}
+>>>>>>> develop
