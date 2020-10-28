@@ -29,10 +29,10 @@ namespace EasyNutrition.API.Test
 
             // Act
             List<Session> result = (List<Session>)await service.ListAsync();
-            int usersCount = result.Count;
+            int sessionsCount = result.Count;
 
             // Assert
-            usersCount.Should().Equals(0);
+            sessionsCount.Should().Equals(0);
         }
 
         [Test]
@@ -40,13 +40,13 @@ namespace EasyNutrition.API.Test
         {
             // Arrange
             var mockSessionRepository = GetDefaultISessionRepositoryInstance();
-            var userId = 1;
-            mockSessionRepository.Setup(r => r.FindById(userId))
+            var sessionId = 1;
+            mockSessionRepository.Setup(r => r.FindById(sessionId))
                 .Returns(Task.FromResult<Session>(null));
             var mockUnitOfWork = GetDefaultIUnitOfWorkInstance();
             var service = new SessionService(mockSessionRepository.Object, mockUnitOfWork.Object);
             // Act
-            SessionResponse result = await service.GetByIdAsync(userId);
+            SessionResponse result = await service.GetByIdAsync(sessionId);
             var message = result.Message;
             // Assert
             message.Should().Be("Session not found");

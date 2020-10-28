@@ -60,7 +60,7 @@ namespace EasyNutrition.API.Services
             if (existingSubscription == null)
                 return new SubscriptionResponse("Subscription not found");
 
-            existingSubscription.maxSessions = subscription.maxSessions;
+            existingSubscription.MaxSessions = subscription.MaxSessions;
 
             try
             {
