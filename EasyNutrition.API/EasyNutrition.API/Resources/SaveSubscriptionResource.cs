@@ -10,10 +10,11 @@ namespace EasyNutrition.API.Resources
     public class SaveSubscriptionResource
     {
       
-        public bool active { get; set; }
-        public int maxSessions { get; set; }
-        public int price { get; set; }
+        public bool Active { get; set; }
+        public int MaxSessions { get; set; }
+        public int Price { get; set; }
 
+        public int UserId { get; set; }
 
 
     }

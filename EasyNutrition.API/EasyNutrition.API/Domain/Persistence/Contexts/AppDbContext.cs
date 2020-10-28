@@ -107,11 +107,11 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             builder.Entity<Subscription>().ToTable("Subscriptions");
             builder.Entity<Subscription>().HasKey(p => p.Id);
             builder.Entity<Subscription>().Property(p => p.Id);
-            builder.Entity<Subscription>().Property(p => p.maxSessions)
+            builder.Entity<Subscription>().Property(p => p.MaxSessions)
                 .IsRequired();
-            builder.Entity<Subscription>().Property(p => p.price)
+            builder.Entity<Subscription>().Property(p => p.Price)
                   .IsRequired();
-            builder.Entity<Subscription>().Property(p => p.active)
+            builder.Entity<Subscription>().Property(p => p.Active)
                 .IsRequired();
 
 
@@ -123,8 +123,8 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             // Agregar data a Subscription
             builder.Entity<Subscription>().HasData
                 (
-                    new Subscription { Id = 1, maxSessions = 4, price = 10, active= true , UserId= 1},
-                    new Subscription { Id = 2, maxSessions = 1, price = 13, active = true, UserId = 2 }
+                    new Subscription { Id = 1, MaxSessions = 4, Price = 10, Active= true , UserId= 1},
+                    new Subscription { Id = 2, MaxSessions = 1, Price = 13, Active = true, UserId = 2 }
 
                 );
 
