@@ -14,6 +14,7 @@ namespace EasyNutrition.API.Resources
         public int maxSessions { get; set; }
         public int price { get; set; }
 
+        public int UserId { get; set; }
 
 
     }

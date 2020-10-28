@@ -10,7 +10,6 @@ namespace EasyNutrition.API.Domain.Repositories
     {
         Task<IEnumerable<SessionDetail>> ListAsync();
         Task<IEnumerable<SessionDetail>> ListByUserIdAsync(int userId);
-        Task<IEnumerable<SessionDetail>> ListAsyncc();
         Task<IEnumerable<SessionDetail>> ListBySessionIdAsync(int sesssionId);
 
         Task AddAsync(SessionDetail sessionDetail);

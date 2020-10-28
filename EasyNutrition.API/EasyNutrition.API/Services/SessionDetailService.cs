@@ -27,10 +27,6 @@ namespace EasyNutrition.API.Services
             return await _sessionDetailRepository.ListAsync();
         }
 
-        public async Task<IEnumerable<SessionDetail>>ListAsyncc()
-         {
-            return await _sessionDetailRepository.ListAsyncc();
-         }
 
         public async Task<IEnumerable<SessionDetail>> ListByUserIdAsync(int userId)
         {

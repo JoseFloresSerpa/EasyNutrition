@@ -9,12 +9,14 @@ namespace EasyNutrition.API.Resources
     public class SaveSessionResource
     {
 
-        public int Id { get; set; }
         public string StartAt { get; set; }
         public string EndAt { get; set; }
 
         [Required]
         [MaxLength(100)]
         public string Link { get; set; }
+
+        public int UserId { get; set; }
+
     }
 }

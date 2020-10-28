@@ -7,9 +7,14 @@ namespace EasyNutrition.API.Resources
 {
     public class SaveSessionDetailResource
     {
-        public int Id { get; set; }
+    
 
         public string State { get; set; }
+
+        public int UserId { get; set; }
+
+        public int SessionId { get; set; }
+
     }
 }
 

@@ -11,7 +11,6 @@ namespace EasyNutrition.API.Domain.Services
     {
 
         Task<IEnumerable<SessionDetail>> ListAsync();
-        Task<IEnumerable<SessionDetail>> ListAsyncc();
         Task<IEnumerable<SessionDetail>> ListByUserIdAsync(int userId);
         Task<IEnumerable<SessionDetail>> ListBySessionIdAsync(int sessionId);
 
