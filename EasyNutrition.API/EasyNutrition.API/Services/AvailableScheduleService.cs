@@ -24,8 +24,6 @@ namespace EasyNutrition.API.Services
             return await _availableScheduleRepository.ListByUserIdAsync(userId);
         }
 
-
-
         public async Task<AvailableScheduleResponse> GetByIdAsync(int id)
         {
             var existingAvailableSchedule = await _availableScheduleRepository.FindById(id);
@@ -34,7 +32,6 @@ namespace EasyNutrition.API.Services
                 return new AvailableScheduleResponse("AvailableSchedule not found");
             return new AvailableScheduleResponse(existingAvailableSchedule);
         }
-
 
         public async Task<AvailableScheduleResponse> SaveAsync(AvailableSchedule availableSchedule)
         {

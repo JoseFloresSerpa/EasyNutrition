@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyNutrition.API.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -46,6 +47,8 @@ namespace EasyNutrition.API.Resources
         [Required]
         [MaxLength(100)]
         public string Linkedin { get; set; }
+
+        public int RoleId { get; set; }
 
     }
 }

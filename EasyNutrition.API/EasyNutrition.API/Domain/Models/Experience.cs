@@ -8,11 +8,8 @@ namespace EasyNutrition.API.Domain.Models
     public class Experience
     {
         public int Id { get; set; }
-
         public string Name { get; set; }
         public string Description { get; set; }
-
-        public IList<Complaint> Complaints { get; set; } = new List<Complaint>();
         public int UserId { get; set; }
         public User User { get; set; }
     }

@@ -20,7 +20,7 @@ namespace EasyNutrition.API
             using (var context = scope.ServiceProvider
             .GetService<AppDbContext>())
             {
-                bool v = context.Database.EnsureCreated();
+                context.Database.EnsureCreated();
             }
             host.Run();
         }

@@ -10,9 +10,6 @@ namespace EasyNutrition.API.Domain.Models
 
         public int Id { get; set; }
         public string Description { get; set; }
-  
-        public int ExperienceId { get; set; }
-        public Experience Experience { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
     }

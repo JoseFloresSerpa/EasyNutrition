@@ -47,6 +47,7 @@ namespace EasyNutrition.API.Services
                 await _unitOfWork.CompleteAsync();
 
                 return new UserResponse(user);
+            
             }
             catch (Exception ex)
             {

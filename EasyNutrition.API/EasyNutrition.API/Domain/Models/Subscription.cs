@@ -11,11 +11,6 @@ namespace EasyNutrition.API.Domain.Models
         public bool active { get; set; }
         public int maxSessions { get; set; }
         public int price { get; set; }
-
-        // public DateTime createdAt { get; set; }
-        // public DateTime updatedAt { get; set; }
-
-
         public int UserId { get; set; }
         public User User { get; set; }
 

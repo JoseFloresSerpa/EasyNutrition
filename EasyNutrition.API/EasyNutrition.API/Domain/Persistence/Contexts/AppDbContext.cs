@@ -153,12 +153,13 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.Complaints)
              .HasForeignKey(pt => pt.UserId);
 
+           
             // Agregar data a Complaint
             builder.Entity<Complaint>().HasData
               (
-                  new Complaint { Id = 1, Description = "Descripcion de prueba complaint", ExperienceId = 1 }
+                  new Complaint { Id = 1, Description = "Descripcion de prueba complaint", UserId = 1 }
               );
-
+            
 
             builder.Entity<AvailableSchedule>()
              .HasOne(pt => pt.User)
@@ -258,7 +259,7 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             // Agregar data a Experience
             builder.Entity<Experience>().HasData
               (
-                  new Experience { Id = 1, Name = "Nombre",Description = "Descripcion de prueba experience" }
+                  new Experience { Id = 1, Name = "Nombre", Description = "Descripcion de prueba experience", UserId = 1}
 
               );
 

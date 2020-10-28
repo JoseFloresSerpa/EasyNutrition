@@ -17,7 +17,7 @@ namespace EasyNutrition.API.Persistence.Repositories
 
         public async Task<IEnumerable<Complaint>> ListAsync()
         {
-            return await _context.Complaint.Include(p => p.Experience).ToListAsync();
+            return await _context.Complaint.Include(p => p.User).ToListAsync();
 
         }
 

@@ -15,7 +15,7 @@ namespace EasyNutrition.API
 
         public async Task<IEnumerable<Experience>> ListAsync()
         {
-            return await _context.Experience.ToListAsync();
+            return await _context.Experience.Include(p => p.User).ToListAsync();
         }
 
         public async Task AddAsync(Experience experience)
