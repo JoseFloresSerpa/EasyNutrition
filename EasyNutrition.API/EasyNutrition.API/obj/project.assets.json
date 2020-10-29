@@ -6452,23 +6452,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\junior\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\6TO ciclo\\Aplicaciones Web\\semana 8\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "projectUniqueName": "E:\\Proyectos Programación\\C#\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
       "projectName": "EasyNutrition.API",
-      "projectPath": "G:\\6TO ciclo\\Aplicaciones Web\\semana 8\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
-      "packagesPath": "C:\\Users\\junior\\.nuget\\packages\\",
-      "outputPath": "G:\\6TO ciclo\\Aplicaciones Web\\semana 8\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
+      "projectPath": "E:\\Proyectos Programación\\C#\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\EasyNutrition.API.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "E:\\Proyectos Programación\\C#\\EasyNutrition\\EasyNutrition.API\\EasyNutrition.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\junior\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6547,7 +6543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
