@@ -50,5 +50,7 @@ namespace EasyNutrition.API.Resources
 
         public int RoleId { get; set; }
 
+
+
     }
 }

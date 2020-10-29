@@ -20,11 +20,7 @@ namespace EasyNutrition.API.Persistence.Repositories
             return await _context.SessionDetails.Include(p => p.User).ToListAsync();
         }
 
-        public async Task<IEnumerable<SessionDetail>> ListAsyncc()
-        {
-            return await _context.SessionDetails.Include(p => p.Session).ToListAsync();
-        }
-
+     
 
         public async Task<IEnumerable<SessionDetail>> ListByUserIdAsync(int userId)
         {

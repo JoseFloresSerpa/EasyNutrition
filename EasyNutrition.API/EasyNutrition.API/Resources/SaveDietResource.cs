@@ -16,6 +16,7 @@ namespace EasyNutrition.API.Resources
         [MaxLength(500)]
         public string Description { get; set; }
 
- 
+        public int SessionId { get; set; }
+
     }
 }

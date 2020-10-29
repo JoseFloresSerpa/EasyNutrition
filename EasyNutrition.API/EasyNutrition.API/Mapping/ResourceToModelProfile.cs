@@ -21,7 +21,7 @@ namespace EasyNutrition.API.Mapping
 
 
             CreateMap<SaveComplaintResource, Complaint>();
-            //CreateMap<SaveExperienceResource, Experience>();
+            CreateMap<SaveExperienceResource, Experience>();
 
             CreateMap<SaveSubscriptionResource, Subscription>();
             CreateMap<SaveAvailableScheduleResource, AvailableSchedule>();

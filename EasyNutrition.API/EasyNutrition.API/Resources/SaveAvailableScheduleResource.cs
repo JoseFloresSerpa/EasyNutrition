@@ -11,9 +11,12 @@ namespace EasyNutrition.API.Resources
 
 
         public string startAt { get; set; }
+
         public string endAt { get; set; }
+
         public bool state { get; set; }
 
+        public int UserId { get; set; }
 
 
 

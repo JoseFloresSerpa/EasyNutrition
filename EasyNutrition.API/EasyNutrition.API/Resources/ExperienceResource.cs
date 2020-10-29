@@ -10,6 +10,8 @@
 
         public string Description { get; set; }
 
+        public UserResource User { get; set; }
+
     }
 
 }
