@@ -42,25 +42,6 @@ namespace EasyNutrition.API.Controllers
             return resources;
         }
 
-        /*
-        [SwaggerOperation(
-          Summary = "List roles ID",
-          Description = "List of Roles by ID",
-          OperationId = "ListRolesByID",
-          Tags = new[] { "Roles" })]
-        [SwaggerResponse(200, "List of Roles by ID", typeof(IEnumerable<RoleResource>))]
-        [HttpGet("{id}")]
-        [ProducesResponseType(typeof(IEnumerable<RoleResource>), 200)]
-        public async Task<IEnumerable<RoleResource>> GetByIdAsync(int id)
-        {
-            var roles = await _roleService.GetByIdAsync(id);
-            var resources = _mapper.Map<IEnumerable<Role>, IEnumerable<RoleResource>>(roles);
-            return resources;
-        }
-        */
-
-
-
         [SwaggerOperation(
             Summary = "Add role",
             Description = "Add new role",

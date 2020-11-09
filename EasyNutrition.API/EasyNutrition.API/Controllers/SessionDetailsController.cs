@@ -16,12 +16,12 @@ namespace EasyNutrition.API.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("api/[controller]")]
-    public class SessionDatailsController : ControllerBase
+    public class SessionDetailsController : ControllerBase
     {
         private readonly ISessionDetailService _sessionDatailService;
         private readonly IMapper _mapper;
 
-        public SessionDatailsController(ISessionDetailService sessionDetailService, IMapper mapper)
+        public SessionDetailsController(ISessionDetailService sessionDetailService, IMapper mapper)
         {
             _sessionDatailService = sessionDetailService;
             _mapper = mapper;
@@ -46,7 +46,7 @@ namespace EasyNutrition.API.Controllers
 
         [SwaggerOperation(
             Summary = "Add SessionDetails",
-            Description = "Add new Sessiondetails",
+            Description = "Add new SessionDetails",
             OperationId = "AaddSessiondetail",
             Tags = new[] { "SessionDetails" })]
         [SwaggerResponse(200, "Add SessionDetail", typeof(IEnumerable<SessionDetailResource>))]
