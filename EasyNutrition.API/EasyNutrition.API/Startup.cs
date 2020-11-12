@@ -24,6 +24,7 @@ namespace EasyNutrition.API
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -41,6 +42,22 @@ namespace EasyNutrition.API
                 options.UseMySQL(Configuration.GetConnectionString("MySQLConnection"));
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:8080");
+                                  });
+
+               options.AddPolicy("AnotherPolicy",
+               builder =>
+               {
+                   builder.WithOrigins("http://localhost:8080")
+                                       .AllowAnyHeader()
+                                       .AllowAnyMethod();
+               });
+            });
 
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IRoleService, RoleService>();
@@ -100,6 +117,8 @@ namespace EasyNutrition.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
