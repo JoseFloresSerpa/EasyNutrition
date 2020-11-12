@@ -9,12 +9,13 @@ using Swashbuckle.AspNetCore.Annotations;
 using EasyNutrition.API.Resources;
 using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Extensions;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace EasyNutrition.API.Controllers
 {
     [ApiController]
     [Produces("application/json")]
+    [EnableCors("AnotherPolicy")]
     [Route("api/[controller]")]
     public class SessionDetailsController : ControllerBase
     {

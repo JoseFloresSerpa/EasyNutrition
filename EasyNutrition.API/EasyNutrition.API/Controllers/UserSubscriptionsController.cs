@@ -2,6 +2,7 @@ using AutoMapper;
 using EasyNutrition.API.Domain.Models;
 using EasyNutrition.API.Domain.Services;
 using EasyNutrition.API.Resources;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
@@ -14,6 +15,7 @@ namespace EasyNutrition.API.Controllers
 
     [ApiController]
     [Produces("application/json")]
+    [EnableCors("AnotherPolicy")]
     [Route("/api/users/{userId}/subscription")]
     public class UserSubscriptionsController : ControllerBase
     {

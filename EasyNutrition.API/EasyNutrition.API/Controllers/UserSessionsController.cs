@@ -9,16 +9,15 @@ using Swashbuckle.AspNetCore.Annotations;
 using EasyNutrition.API.Extensions;
 using EasyNutrition.API.Resources;
 using EasyNutrition.API.Domain.Models;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace EasyNutrition.API.Controllers
 {
 
     [ApiController]
     [Produces("application/json")]
+    [EnableCors("AnotherPolicy")]
     [Route("api/[controller]")]
-
-
     public class UserSessionsController : ControllerBase
     {
         private readonly ISessionService _sessionService;
