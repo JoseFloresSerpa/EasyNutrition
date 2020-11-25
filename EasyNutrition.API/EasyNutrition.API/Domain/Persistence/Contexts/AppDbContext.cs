@@ -96,12 +96,19 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
 
             builder.Entity<User>().HasData
-                (
-                    new User { Id = 1, Username = "AlfredoGomez", Password = "Gomez", Name= "Alfredo", Lastname="Gomez",Birthday="10/10/1980",Email="alfredito@gmail.com", Phone="97531546",Address="Las Malvinas 123",Active=true, Linkedin="https:\\afjaowjfiawj.com" , RoleId=1},
-                     new User { Id = 2, Username = "AlfredoGomez", Password = "Gomez", Name = "Alfredo", Lastname = "Gomez", Birthday = "10/10/1980", Email = "alfredito@gmail.com", Phone = "97531546", Address = "Las Malvinas 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 }
+          (
+               new User { Id = 1, Username = "Alfredo Gomez", Password = "dbJe*D4xqfd|e]*p&", Name = "Alfredo", Lastname = "Gomez", Birthday = "10/10/1985", Email = "alfredito@gmail.com", Phone = "97531546", Address = "Las Malvinas 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 },
+               new User { Id = 2, Username = "Hernesto Sanchez", Password = "1WH1wm%tL#AUsgqB@", Name = "Hernesto", Lastname = "Sanchez", Birthday = "10/10/1990", Email = "hernes@gmail.com", Phone = "97531546", Address = "Las Malvinas 667", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 },
+               new User { Id = 3, Username = "Agusto Hernandez", Password = "exCBHH0UdzyGpCxE~", Name = "Agusto", Lastname = "Hernandez", Birthday = "10/10/1970", Email = "augus@gmail.com", Phone = "97532346", Address = "Las Poncinas 314", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 2 },
+               new User { Id = 4, Username = "Jeremy ALfonso", Password = "HYO|@o7XJK@T<^W(^", Name = "Jeremy", Lastname = "ALfonso", Birthday = "10/10/1989", Email = "jere@gmail.com", Phone = "978561234", Address = "Villanueva 454", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 3 },
+               new User { Id = 5, Username = "Augusto Salazar", Password = "1b}%Ct(Th*(0odt1l", Name = "Augusto", Lastname = "Salazar", Birthday = "10/10/1987", Email = "augus_14@gmail.com", Phone = "97512346", Address = "Las doce 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 2 },
+               new User { Id = 6, Username = "Yimmy Neutron", Password = "MW~#o2z2#I)!WjDKR", Name = "Yimmy", Lastname = "Neutron", Birthday = "10/10/1982", Email = "yim23@gmail.com", Phone = "97559746", Address = "CHavin 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 },
+               new User { Id = 7, Username = "Steve Robi", Password = "7k<GV(qEe%PHJOFc#", Name = "Steve", Lastname = "Robi", Birthday = "10/10/1990", Email = "steve789@gmail.com", Phone = "97539756", Address = "Cajamarca 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 2 },
+               new User { Id = 8, Username = "Sandro Quispe", Password = "mh$!iPSvXAfCWkh$f", Name = "Sandro", Lastname = "Quispe", Birthday = "10/10/1990", Email = "san23@gmail.com", Phone = "94561546", Address = "Av. Ayacucho 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 3 },
+               new User { Id = 9, Username = "Ali Jamelio", Password = "OHG2|CZ^9Z6#d!*Xf", Name = "Ali", Lastname = "Jamelio", Birthday = "10/10/1987", Email = "alimoha@gmail.com", Phone = "97821546", Address = "Av- Bolivar 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 1 },
+               new User { Id = 10, Username = "Angel Gavidia", Password = "ZNrr&l*xeucG2W(*D", Name = "Angel", Lastname = "Gavidia", Birthday = "10/10/1989", Email = "angel123@gmail.com", Phone = "94861546", Address = "Alfonso Ugarte 123", Active = true, Linkedin = "https:\\afjaowjfiawj.com", RoleId = 4 }
 
-
-                );
+          );
             // Entidad Subscription
 
             builder.Entity<Subscription>().ToTable("Subscriptions");
@@ -122,11 +129,18 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             // Agregar data a Subscription
             builder.Entity<Subscription>().HasData
-                (
-                    new Subscription { Id = 1, MaxSessions = 4, Price = 10, Active= true , UserId= 1},
-                    new Subscription { Id = 2, MaxSessions = 1, Price = 13, Active = true, UserId = 2 }
-
-                );
+                 (
+                     new Subscription { Id = 1, MaxSessions = 4, Price = 10, Active = true, UserId = 1 },
+                     new Subscription { Id = 2, MaxSessions = 1, Price = 13, Active = true, UserId = 2 },
+                     new Subscription { Id = 3, MaxSessions = 4, Price = 10, Active = true, UserId = 3 },
+                     new Subscription { Id = 4, MaxSessions = 4, Price = 10, Active = true, UserId = 4 },
+                     new Subscription { Id = 5, MaxSessions = 4, Price = 10, Active = true, UserId = 5 },
+                     new Subscription { Id = 6, MaxSessions = 4, Price = 10, Active = true, UserId = 6 },
+                     new Subscription { Id = 7, MaxSessions = 4, Price = 10, Active = true, UserId = 7 },
+                     new Subscription { Id = 8, MaxSessions = 4, Price = 10, Active = true, UserId = 8 },
+                     new Subscription { Id = 9, MaxSessions = 4, Price = 10, Active = true, UserId = 9 },
+                     new Subscription { Id = 10, MaxSessions = 4, Price = 10, Active = true, UserId = 10 }
+                 );
 
             // Entidad AvailableSchedule
 
@@ -153,12 +167,14 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
              .WithMany(p => p.Complaints)
              .HasForeignKey(pt => pt.UserId);
 
-           
+
             // Agregar data a Complaint
             builder.Entity<Complaint>().HasData
-              (
-                  new Complaint { Id = 1, Description = "Descripcion de prueba complaint", UserId = 1 }
-              );
+               (
+                   new Complaint { Id = 1, Description = "Descripcion de prueba complaint", UserId = 1 },
+                   new Complaint { Id = 2, Description = "Descripcion de prueba complaint 2", UserId = 2 },
+                   new Complaint { Id = 3, Description = "Descripcion de prueba complaint 3 ", UserId = 3 }
+               ); ;
             
 
             builder.Entity<AvailableSchedule>()
@@ -196,12 +212,20 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             // Agregar data a Session
             builder.Entity<Session>().HasData
-                (
-                    new Session { Id = 1, StartAt = "Monday, March 24,2019 17:00:00 PM", EndAt = "Monday, March 24 ,2019 18:00:00 PM", Link = "https" , UserId = 1 },
-                    new Session { Id = 2, StartAt = "Thursday, March 26,2019 20:00:00 PM", EndAt = "Thurday, March 26 ,2019 21:00:00 PM", Link = "https" , UserId = 2 }
+                  (
+                      new Session { Id = 1, StartAt = "Monday, March 24,2019 17:00:00 PM", EndAt = "Monday, March 24 ,2019 18:00:00 PM", Link = "https", UserId = 1 },
+                      new Session { Id = 2, StartAt = "Thursday, March 26,2019 20:00:00 PM", EndAt = "Thurday, March 26 ,2019 21:00:00 PM", Link = "https", UserId = 2 },
+                      new Session { Id = 3, StartAt = "Monday, March 13,2019 17:00:00 PM", EndAt = "Monday, March 13 ,2019 18:00:00 PM", Link = "https", UserId = 3 },
+                      new Session { Id = 4, StartAt = "Monday, March 24,2019 16:00:00 PM", EndAt = "Monday, March 24 ,2019 17:00:00 PM", Link = "https", UserId = 4 },
+                      new Session { Id = 5, StartAt = "Monday, March 24,2019 17:00:00 PM", EndAt = "Monday, March 24 ,2019 18:00:00 PM", Link = "https", UserId = 5 },
+                      new Session { Id = 6, StartAt = "Monday, March 24,2019 17:00:00 PM", EndAt = "Monday, March 24 ,2019 18:00:00 PM", Link = "https", UserId = 6 },
+                      new Session { Id = 7, StartAt = "Thursday, March 26,2019 20:00:00 PM", EndAt = "Thurday, March 26 ,2019 21:00:00 PM", Link = "https", UserId = 7 },
+                      new Session { Id = 8, StartAt = "Monday, March 13,2019 17:00:00 PM", EndAt = "Monday, March 13 ,2019 18:00:00 PM", Link = "https", UserId = 8 },
+                      new Session { Id = 9, StartAt = "Monday, March 24,2019 16:00:00 PM", EndAt = "Monday, March 24 ,2019 17:00:00 PM", Link = "https", UserId = 9 },
+                      new Session { Id = 10, StartAt = "Monday, March 24,2019 17:00:00 PM", EndAt = "Monday, March 24 ,2019 18:00:00 PM", Link = "https", UserId = 10 }
 
-                );
-             
+                  );
+
 
             //Entidad SessionDetails
 
@@ -224,22 +248,38 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             .HasForeignKey(pt => pt.SessionId);
 
             builder.Entity<AvailableSchedule>().HasData
-                (
-                    new AvailableSchedule { Id = 1, startAt = "Friday, February 22, 2019 2:00:55 PM", endAt = "Friday, February 22, 2019 2:40:55 PM", state = true, UserId = 1 },
-                    new AvailableSchedule { Id = 2, startAt = "Friday, February 22, 2019 5:00:55 PM", endAt = "Friday, February 22, 2019 6:40:55 PM", state = true, UserId = 2 }
+                 (
+                     new AvailableSchedule { Id = 1, startAt = "Friday, February 22, 2019 2:00:55 PM", endAt = "Friday, February 22, 2019 2:40:55 PM", state = true, UserId = 1 },
+                     new AvailableSchedule { Id = 2, startAt = "Friday, February 23, 2019 5:00:55 PM", endAt = "Friday, February 23, 2019 6:40:55 PM", state = true, UserId = 2 },
+                     new AvailableSchedule { Id = 3, startAt = "Friday, February 24, 2019 7:00:55 PM", endAt = "Friday, February 24, 2019 8:40:55 PM", state = true, UserId = 3 },
+                     new AvailableSchedule { Id = 4, startAt = "Friday, February 25, 2019 9:00:55 PM", endAt = "Friday, February 25, 2019 10:40:55 PM", state = true, UserId = 4 },
+                     new AvailableSchedule { Id = 5, startAt = "Friday, February 03, 2019 2:00:55 PM", endAt = "Friday, February 03, 2019 3:40:55 PM", state = true, UserId = 5 },
+                     new AvailableSchedule { Id = 6, startAt = "Friday, February 18, 2019 5:00:55 PM", endAt = "Friday, February 18, 2019 6:40:55 PM", state = true, UserId = 6 },
+                     new AvailableSchedule { Id = 7, startAt = "Friday, February 02, 2019 3:00:55 PM", endAt = "Friday, February 02, 2019 4:40:55 PM", state = true, UserId = 7 },
+                     new AvailableSchedule { Id = 8, startAt = "Friday, February 10, 2019 2:00:55 PM", endAt = "Friday, February 10, 2019 3:40:55 PM", state = true, UserId = 8 },
+                     new AvailableSchedule { Id = 9, startAt = "Friday, February 11, 2019 1:00:55 PM", endAt = "Friday, February 11, 2019 2:40:55 PM", state = true, UserId = 9 },
+                     new AvailableSchedule { Id = 10, startAt = "Friday, February 13, 2019 5:00:55 PM", endAt = "Friday, February 13, 2019 6:40:55 PM", state = true, UserId = 10 }
 
-                );
+
+                 );
 
 
 
-          
-            builder.Entity<SessionDetail>().HasData
+    builder.Entity<SessionDetail>().HasData
                 (
                     new SessionDetail { Id = 1, State = "Disponible", UserId = 1, SessionId = 1 },
-                    new SessionDetail { Id = 2, State = "Disponible", UserId = 2, SessionId = 2 }
+                    new SessionDetail { Id = 2, State = "Disponible", UserId = 1, SessionId = 2 },
+                    new SessionDetail { Id = 3, State = "Restringida", UserId = 2, SessionId = 3 },
+                    new SessionDetail { Id = 4, State = "Disponible", UserId = 3, SessionId = 4 },
+                    new SessionDetail { Id = 5, State = "Disponible", UserId = 4, SessionId = 5 },
+                    new SessionDetail { Id = 6, State = "Disponible", UserId = 5, SessionId = 6 },
+                    new SessionDetail { Id = 7, State = "Restringida", UserId = 6, SessionId = 7 },
+                    new SessionDetail { Id = 8, State = "Disponible", UserId = 7, SessionId = 8 },
+                    new SessionDetail { Id = 9, State = "Restringida", UserId = 8, SessionId = 9 },
+                    new SessionDetail { Id = 10, State = "Restringida", UserId = 9, SessionId = 10 }
+
 
                 );
-
 
             //Entidad Experience
             builder.Entity<Experience>().ToTable("Experience");
@@ -258,10 +298,11 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             // Agregar data a Experience
             builder.Entity<Experience>().HasData
-              (
-                  new Experience { Id = 1, Name = "Nombre", Description = "Descripcion de prueba experience", UserId = 1}
+               (
+                   new Experience { Id = 1, Name = "Augusto", Description = "Estoy notando los resultados positivos", UserId = 1 },
+                   new Experience { Id = 4, Name = "Hernesto", Description = "Excelentes resultados por las dietas", UserId = 2}
 
-              );
+               );
 
 
             //Entidad Diet
@@ -276,11 +317,15 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             // Agregar data a Diet
             builder.Entity<Diet>().HasData
-                (
-                    new Diet { Id = 1, Title = "Dieta Vegetariana", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 1 },
-                    new Diet { Id = 2, Title = "Dieta para aumentar masa musuclar", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 2 }
+              (
+                  new Diet { Id = 1, Title = "Dieta Vegetariana", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 1 },
+                  new Diet { Id = 2, Title = "Dieta para aumentar masa musuclar", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 2 },
+                  new Diet { Id = 3, Title = "Dieta miniCut", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 3 },
+                  new Diet { Id = 4, Title = "Dieta Tonificación Muscular", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 4 },
+                  new Diet { Id = 5, Title = "Dieta definición", Description = "Lunes: x Martes: x Miercoles: x", SessionId = 5 }
 
-                );
+
+              );
 
             //Entidad Progress
             builder.Entity<Progress>().ToTable("Progresses");
@@ -292,11 +337,14 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             // Agregar data a Diet
             builder.Entity<Progress>().HasData
-                (
-                    new Progress { Id = 1,  Description = "Bajó 4 kilos", SessionId = 1 },
-                    new Progress { Id = 2,  Description = "Aumentó su masa en 6 kilos", SessionId = 2 }
+              (
+                  new Progress { Id = 1, Description = "Bajó 4 kilos", SessionId = 1 },
+                  new Progress { Id = 2, Description = "Aumentó su masa en 3 kilos", SessionId = 2 },
+                  new Progress { Id = 3, Description = "Logró bajar mi porcentaje de grasa a un 12%", SessionId = 3 },
+                  new Progress { Id = 4, Description = "Aumentó 1kg de masa muscular", SessionId = 4 },
+                  new Progress { Id = 5, Description = "Aumentó su masa en 2 kilos", SessionId = 5 }
 
-                );
+              );
 
 
             // Apply Naming Conventions Policy
