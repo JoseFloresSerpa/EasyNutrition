@@ -31,7 +31,7 @@ namespace EasyNutrition.API.Domain.Models
 
         public IList<Subscription> Subscriptions { get; set; } = new List<Subscription>();
 
-        public IList<AvailableSchedule> AvailableSchedules { get; set; } = new List<AvailableSchedule>();
+        public IList<Schedule> Schedules { get; set; } = new List<Schedule>();
 
         public IList<Complaint> Complaints { get; set; } = new List<Complaint>();
         public IList<Experience> Experiences { get; set; } = new List<Experience>();

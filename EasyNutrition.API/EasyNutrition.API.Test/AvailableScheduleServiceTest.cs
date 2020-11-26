@@ -25,17 +25,17 @@ namespace EasyNutrition.API.Test
             mockAvailableScheduleRepository.Setup(r => r.FindById(availableScheduleId))
                 .Returns(Task.FromResult<AvailableSchedule>(null));
             var mockUnitOfWork = GetDefaultIUnitOfWorkInstance();
-            var service = new AvailableScheduleService(mockAvailableScheduleRepository.Object, mockUnitOfWork.Object);
+            var service = new ScheduleService(mockAvailableScheduleRepository.Object, mockUnitOfWork.Object);
             // Act
-            AvailableScheduleResponse result = await service.GetByIdAsync(availableScheduleId);
+            ScheduleResponse result = await service.GetByIdAsync(availableScheduleId);
             var message = result.Message;
             // Assert
             message.Should().Be("AvailableSchedule not found");
         }
 
-        private Mock<IAvailableScheduleRepository> GetDefaultIAvailableScheduleRepositoryInstance()
+        private Mock<IScheduleRepository> GetDefaultIAvailableScheduleRepositoryInstance()
         {
-            return new Mock<IAvailableScheduleRepository>();
+            return new Mock<IScheduleRepository>();
         }
 
         private Mock<IUnitOfWork> GetDefaultIUnitOfWorkInstance()
