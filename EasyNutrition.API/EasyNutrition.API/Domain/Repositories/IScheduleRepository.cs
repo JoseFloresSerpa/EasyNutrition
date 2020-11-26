@@ -8,6 +8,8 @@ namespace EasyNutrition.API.Domain.Repositories
 {
     public interface IScheduleRepository
     {
+        Task<IEnumerable<Schedule>> ListAsync();
+
         Task<IEnumerable<Schedule>> ListByUserIdAsync(int userId);
 
         Task AddAsync(Schedule schedule);

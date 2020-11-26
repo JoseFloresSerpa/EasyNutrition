@@ -15,7 +15,10 @@ namespace EasyNutrition.API.Persistence.Repositories
         public ScheduleRepository(AppDbContext context) : base(context)
         {
         }
-
+        public async Task<IEnumerable<Schedule>> ListAsync()
+        {
+            return await _context.Schedules.Include(p => p.User).ToListAsync();
+        }
 
         public async Task<IEnumerable<Schedule>> ListByUserIdAsync(int userId)
         {
