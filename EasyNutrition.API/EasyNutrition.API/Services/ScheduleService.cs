@@ -13,6 +13,10 @@ namespace EasyNutrition.API.Services
         private readonly IScheduleRepository _scheduleRepository;
         private readonly IUnitOfWork _unitOfWork;
 
+        public async Task<IEnumerable<Schedule>> ListAsync()
+        {
+            return await _scheduleRepository.ListAsync();
+        }
         public ScheduleService(IScheduleRepository scheduleRepository, IUnitOfWork unitOfWork)
         {
             _scheduleRepository = scheduleRepository;
@@ -54,7 +58,7 @@ namespace EasyNutrition.API.Services
             if (existingSchedule == null)
                 return new ScheduleResponse("Schedule not found");
 
-            existingSchedule.state = schedule.state;
+            existingSchedule.State = schedule.State;
 
             try
             {

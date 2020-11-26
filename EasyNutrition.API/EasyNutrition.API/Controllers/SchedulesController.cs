@@ -29,6 +29,20 @@ namespace EasyNutrition.API.Controllers
             _mapper = mapper;
         }
 
+        [SwaggerOperation(
+         Summary = "List all schedules",
+         Description = "List of Schedules",
+         OperationId = "ListAllSchedules",
+         Tags = new[] { "Schedules" })]
+        [SwaggerResponse(200, "List of Schedules", typeof(IEnumerable<ScheduleResource>))]
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<ScheduleResource>), 200)]
+        public async Task<IEnumerable<ScheduleResource>> GetAllAsync()
+        {
+            var schedules = await _scheduleService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<Schedule>, IEnumerable<ScheduleResource>>(schedules);
+            return resources;
+        }
 
         [SwaggerOperation(
                Summary = "Add schedule",

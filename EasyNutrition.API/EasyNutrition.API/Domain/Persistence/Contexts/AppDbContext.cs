@@ -147,11 +147,11 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
             builder.Entity<Schedule>().ToTable("Schedules");
             builder.Entity<Schedule>().HasKey(p => p.Id);
             builder.Entity<Schedule>().Property(p => p.Id);
-            builder.Entity<Schedule>().Property(p => p.startAt)
+            builder.Entity<Schedule>().Property(p => p.StartAt)
                 .IsRequired();
-            builder.Entity<Schedule>().Property(p => p.endAt)
+            builder.Entity<Schedule>().Property(p => p.EndAt)
                   .IsRequired();
-            builder.Entity<Schedule>().Property(p => p.state)
+            builder.Entity<Schedule>().Property(p => p.State)
                 .IsRequired();
 
             //Entidad Complaint
@@ -249,16 +249,16 @@ namespace EasyNutrition.API.Domain.Persistence.Contexts
 
             builder.Entity<Schedule>().HasData
                  (
-                     new Schedule { Id = 1, startAt = "Friday, February 22, 2019 2:00:55 PM", endAt = "Friday, February 22, 2019 2:40:55 PM", state = true, UserId = 1 },
-                     new Schedule { Id = 2, startAt = "Friday, February 23, 2019 5:00:55 PM", endAt = "Friday, February 23, 2019 6:40:55 PM", state = true, UserId = 2 },
-                     new Schedule { Id = 3, startAt = "Friday, February 24, 2019 7:00:55 PM", endAt = "Friday, February 24, 2019 8:40:55 PM", state = true, UserId = 3 },
-                     new Schedule { Id = 4, startAt = "Friday, February 25, 2019 9:00:55 PM", endAt = "Friday, February 25, 2019 10:40:55 PM", state = true, UserId = 4 },
-                     new Schedule { Id = 5, startAt = "Friday, February 03, 2019 2:00:55 PM", endAt = "Friday, February 03, 2019 3:40:55 PM", state = true, UserId = 5 },
-                     new Schedule { Id = 6, startAt = "Friday, February 18, 2019 5:00:55 PM", endAt = "Friday, February 18, 2019 6:40:55 PM", state = true, UserId = 6 },
-                     new Schedule { Id = 7, startAt = "Friday, February 02, 2019 3:00:55 PM", endAt = "Friday, February 02, 2019 4:40:55 PM", state = true, UserId = 7 },
-                     new Schedule { Id = 8, startAt = "Friday, February 10, 2019 2:00:55 PM", endAt = "Friday, February 10, 2019 3:40:55 PM", state = true, UserId = 8 },
-                     new Schedule { Id = 9, startAt = "Friday, February 11, 2019 1:00:55 PM", endAt = "Friday, February 11, 2019 2:40:55 PM", state = true, UserId = 9 },
-                     new Schedule { Id = 10, startAt = "Friday, February 13, 2019 5:00:55 PM", endAt = "Friday, February 13, 2019 6:40:55 PM", state = true, UserId = 10 }
+                     new Schedule { Id = 1, StartAt = "Friday, February 22, 2019 2:00:55 PM", EndAt = "Friday, February 22, 2019 2:40:55 PM", State = true, UserId = 1 },
+                     new Schedule { Id = 2, StartAt = "Friday, February 23, 2019 5:00:55 PM", EndAt = "Friday, February 23, 2019 6:40:55 PM", State = true, UserId = 2 },
+                     new Schedule { Id = 3, StartAt = "Friday, February 24, 2019 7:00:55 PM", EndAt = "Friday, February 24, 2019 8:40:55 PM", State = true, UserId = 3 },
+                     new Schedule { Id = 4, StartAt = "Friday, February 25, 2019 9:00:55 PM", EndAt = "Friday, February 25, 2019 10:40:55 PM",State = true, UserId = 4 },
+                     new Schedule { Id = 5, StartAt = "Friday, February 03, 2019 2:00:55 PM", EndAt = "Friday, February 03, 2019 3:40:55 PM", State = true, UserId = 5 },
+                     new Schedule { Id = 6, StartAt = "Friday, February 18, 2019 5:00:55 PM", EndAt = "Friday, February 18, 2019 6:40:55 PM", State = true, UserId = 6 },
+                     new Schedule { Id = 7, StartAt = "Friday, February 02, 2019 3:00:55 PM", EndAt = "Friday, February 02, 2019 4:40:55 PM", State = true, UserId = 7 },
+                     new Schedule { Id = 8, StartAt = "Friday, February 10, 2019 2:00:55 PM", EndAt = "Friday, February 10, 2019 3:40:55 PM", State = true, UserId = 8 },
+                     new Schedule { Id = 9, StartAt = "Friday, February 11, 2019 1:00:55 PM", EndAt = "Friday, February 11, 2019 2:40:55 PM", State = true, UserId = 9 },
+                     new Schedule { Id = 10,StartAt = "Friday, February 13, 2019 5:00:55 PM", EndAt = "Friday, February 13, 2019 6:40:55 PM", State = true, UserId = 10 }
 
 
                  );

@@ -9,6 +9,7 @@ namespace EasyNutrition.API.Domain.Services
 {
     public interface IScheduleService
     {
+        Task<IEnumerable<Schedule>> ListAsync();
 
         Task<IEnumerable<Schedule>> ListByUserIdAsync(int userId);
 
